@@ -1,16 +1,14 @@
 from django import forms
 
-# Info/COntact forms
-class InfoForm(forms.Form):
-    contact_name = forms.CharField(required=True)
-    contact_email = forms.EmailField(required=True)
-    content = forms.CharField(
-        required=True,
-        widget=forms.Textarea
-    )
 
-    def __init__(self,*args,**kwargs):
-        super(InfoForm,self).__init__(*args,**kwargs)
-        self.fields['contact_name'].label = "Your Name:"
-        self.fields['contact_email'].label = "Your Email:"
-        self.fields['content'].label = "Tell us a little bit about why you're interested in our study:"
+class ContactForm(forms.Form):
+    name= forms.CharField(max_length=500, label="Name")
+    email= forms.EmailField(max_length=500, label="Email")
+    comment= forms.CharField(label='',widget=forms.Textarea(
+                        attrs={'placeholder': 'Enter your comment here'}))
+
+    # def __init__(self,*args,**kwargs):
+    #     super(InfoForm,self).__init__(*args,**kwargs)
+    #     self.fields['contact_name'].label = "Your Name:"
+    #     self.fields['contact_email'].label = "Your Email:"
+    #     self.fields['content'].label = "Tell us a little bit about why you're interested in our study:"

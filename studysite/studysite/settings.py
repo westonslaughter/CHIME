@@ -25,7 +25,7 @@ SECRET_KEY = '+tohb!e4p(@#avcley7zf5q!0)8tb0m*9+7l&-*i+u5e4e8x*s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['wesslaughter.pythonanywhere.com']
+ALLOWED_HOSTS = ['wesslaughter.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -121,12 +121,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'wslaughter@berkeley.edu'
+DEFAULT_FROM_EMAIL = 'chimecontact@gmail.com'
 
 # SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+EMAIL_HOST= 'smtp.gmail.com'
+EMAIL_HOST_USER= 'chimecontact@gmail.com'
+EMAIL_HOST_PASSWORD= '22Stonefly!'
+EMAIL_USE_TLS= True
+EMAIL_PORT= 587

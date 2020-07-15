@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import View, TemplateView
 # 'Contact Us' Form
-from info.forms import InfoForm
+# from info.forms import InfoForm
 from django.core.mail import EmailMessage
 from django.shortcuts import redirect
 from django.template.loader import get_template
@@ -18,52 +18,40 @@ class StudyView(TemplateView):
 class UsView(TemplateView):
     template_name='us.html'
 
+class ThanksView(TemplateView):
+    template_name='thanks.html'
+
 # class InfoView(TemplateView):
     # template_name='info.html'
 
-def Info(request):
-    form_class = InfoForm
+from .forms import ContactForm
 
-    # logic!
-    if request.method == 'POST':
-        form = form_class(data=request.POST)
 
-        if form.is_valid():
-            contact_name = request.POST.get(
-                'contact_name'
-            , '')
-            contact_email = request.POST.get(
-                'contact_email'
-            , '')
-            form_content = request.POST.get('content', '')
+def contactview(request):
+    name=''
+    email=''
+    comment=''
 
-            # Email the profile with the
-            # contact information
-            template = get_template('contact_template.txt')
-            context = {
-                'contact_name': contact_name,
-                'contact_email': contact_email,
-                'form_content': form_content,
-            }
-            content = template.render(context)
 
-            # email = EmailMessage(
-            #     "New contact form submission",
-            #     content,
-            #     "California Health Impacts from Mining Exposure" +'',
-            #     ['westonslaughter@gmail.com'],
-            #     headers = {'Reply-To': contact_email }
-            # )
+    form= ContactForm(request.POST or None)
+    if form.is_valid():
+        name= form.cleaned_data.get("name")
+        email= form.cleaned_data.get("email")
+        comment=form.cleaned_data.get("comment")
 
-            email = send_mail('CHIME Participant',
-             contact_name,
-             'wslaughter@berkeley.edu',
-             [contact_email],
-             fail_silently=False)
 
-            # email.send()
-            return redirect('info')
+        subject= "A Visitor's Comment"
 
-    return render(request, 'info.html', {
-        'form': form_class,
-    })
+
+        comment= name + " with the email, " + email + ", sent the following message:\n\n" + comment;
+        send_mail(subject, comment, 'chimecontact@gmail.com', ['chimecontact@gmail.com'])
+
+
+        context= {'form': form}
+
+        return render(request, 'thanks.html', context)
+
+    else:
+        context= {'form': form}
+        # Maybe should make, an "oops!" form?
+        return render(request, 'info/info.html', context)
