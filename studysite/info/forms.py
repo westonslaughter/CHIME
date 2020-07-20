@@ -1,11 +1,19 @@
 from django import forms
+from .models import ContactMod
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = ContactMod
+        fields = {'name','email','comment'}
+        field_order = ['name','email','comment']
 
 
-class ContactForm(forms.Form):
-    name= forms.CharField(max_length=500, label="Name")
-    email= forms.EmailField(max_length=500, label="Email")
-    comment= forms.CharField(label='',widget=forms.Textarea(
-                        attrs={'placeholder': 'Enter your comment here'}))
+
+        widgets ={
+            'name': forms.TextInput(attrs={'class': 'form-control','placeholder':'Your Name','style': 'width:270px'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control','placeholder':'Your Email','style': 'width:270px'}),
+            'comment': forms.Textarea(attrs={'class': 'form-control','placeholder':"Tell us about yourself, and why you're interested in the study!"}),
+        }
 
     # def __init__(self,*args,**kwargs):
     #     super(InfoForm,self).__init__(*args,**kwargs)

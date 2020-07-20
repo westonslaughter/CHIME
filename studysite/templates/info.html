@@ -1,15 +1,28 @@
 {% extends 'base.html' %}
+
 {% block body_block %}
-<div class= "container">
+{% load static %}
+
+<div class="jumbotron">
   <h1>Interested in participating?</h1>
-  <br>
-  <br>
+  <p>We're looking for women participants in
+     <strong> Sierra, Nevada, Placer, Almador, Mariposa,</strong> and<strong> Calaveras </strong>counties to be part of our study! Fill out the form below to let us know a little about yourself, and why you're interested!</p>
 </div>
 
-<form role="form" action="" method="POST">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Submit</button>
-</form>
+<div class= "containessr">
+
+<div class="form-group">
+  <form role="form" action="" method="POST">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+</div>
+<br>
+<br>
+</div>
 
 {% endblock %}

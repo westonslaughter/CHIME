@@ -33,7 +33,7 @@ def contactview(request):
     comment=''
 
 
-    form= ContactForm(request.POST or None)
+    form = ContactForm(request.POST or None)
     if form.is_valid():
         name= form.cleaned_data.get("name")
         email= form.cleaned_data.get("email")
@@ -54,4 +54,4 @@ def contactview(request):
     else:
         context= {'form': form}
         # Maybe should make, an "oops!" form?
-        return render(request, 'info/info.html', context)
+        return render(request, 'info.html', context)

@@ -1,27 +1,88 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>CHIME Base</title>
+    <title>CHIME</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'studysite/css/master.css' %}">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    	jQuery(function($){
+        	$( '.menu-btn' ).click(function(){
+        		$('.responsive-menu').addClass('expand')
+        		$('.menu-btn').addClass('btn-none')
+        	})
+
+        	 $( '.close-btn' ).click(function(){
+        		$('.responsive-menu').removeClass('expand')
+        		$('.menu-btn').removeClass('btn-none')
+        	})
+      	})
+     </script>
+     <link href="https://fonts.googleapis.com/css2?family=Karla&family=Montserrat&display=swap" rel="stylesheet">
   </head>
   <body>
 
   <body>
-    <nav class='navbar mynav' role='navigation' id='navbar'>
+
+  <!-- ORIGINAL NAVBAR -->
+    <!-- <nav class='navbar mynav' role='navigation' id='navbar'>
       <div class="container">
         <a class='navbar-brand mynav' href="{% url 'home' %}">Home</a>
         <ul class='nav navbar-nav navbar-right'>
 
             <li><a href="{% url 'study' %}">Our Study</a></li>
             <li><a href="{% url 'us' %}">Our Team</a></li>
-            <li><a href="{% url 'info:info' %}">Join Us!</a></li>
-
+            <li><a href="{% url 'info:info' %}">Contact</a></li>
 
         </ul>
 
       </div>
-    </nav>
+    </nav> -->
+
+<!-- NAVBAR HAMBURGER -->
+
+  <nav class="navbar navbar-default">
+
+      <!-- Inside of a Container -->
+    <div class="container-fluid mobile-nav">
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <!-- This is the actual code that create the "hamburger icon" -->
+      <!-- The data-target grabs ids to put into the icon -->
+      <div class="navbar-header menu-btn" id="menu-btn">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+          <!--  Code for the hamburger icon-->
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="{% url 'home' %}">CHIME</a>
+      </div>
+
+      <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+      <div class="collapse navbar-collapse responsive-menu" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+
+          <li><a href="{% url 'study' %}">Our Study<span class="sr-only">(current)</span></a></li>
+          <li><a href="{% url 'us' %}">Our Team</a></li>
+          <li><a href="{% url 'info:info' %}">Contact</a></li>
+
+        </ul>
+
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 
     <div class="container mycontent">
 

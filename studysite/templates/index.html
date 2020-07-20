@@ -2,9 +2,18 @@
 {% block body_block %}
 
   <div class="jumbotron">
-    <h1>Welcome to the CHIME Study</h1>
+    <h1 class="display-4">Welcome to the CHIME Study</h1>
     <h2>California Health Impacts from Mining Exposure</h2>
-    <p>I'm a Pirate, Arghhhhhhhh</p>
-  </div>
+    <br>
+    <p class="lead">We're looking into public health issues related to heavy metal pollutants
+      from mining history in California's Northern Sierra region. The research is conducted by Nevada City based community environmental
+      research non-profit <a href="https://sierrastreamsinstitute.org/">Sierra Streams Institute</a>,
+      as well as partners at <a href="https://epibiostat.ucsf.edu/content/peggy-reynolds-phd">University of California San Francisco</a>, and <a href="https://profiles.arizona.edu/person/mdramire">University of Arizona.</a></p>
+    <hr class="my-4">
+      <p>Interested? We are looking for women living in the Northern Sierra to participate!</p>
+      <p class="lead">
+    <a class="btn btn-primary btn-lg" href="{% url 'info:info' %}" role="button">Get Involved</a>
+  </p>
+</div>
 
 {% endblock %}

@@ -1,4 +1,199 @@
 {% extends 'base.html' %}
 {% block body_block %}
-  <h1>Who we are:</h1>
+{% load static %}
+
+<!-- MAIN JUMBOTRON -->
+<div class="jumbotron">
+  <h1>Meet Our Researchers</h1>
+  <p>Our team, from University of San Francisco, University of Arizona, and Sierra Streams Institute</p>
+</div>
+
+
+<!-- SIERRA STREAMS STAFF -->
+<h2 class="my-4" style="margin: 0 auto; text-align: center;">Sierra Streams Institute</h2>
+<hr>
+
+<br>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{% static "studysite/images/JoanneM.jpg" %}" alt="Joanne" style="width:90%;border-radius:50%; display: block; margin-left: auto; margin-right: auto;">
+      <div class="container">
+        <h2>
+          <span class="full-text">Joanne Hilde</span>
+          <span class="short-text">Joanne</span>
+        </h2>
+
+        <p class="title">Principal Investigator</p>
+        <!-- <p>Principal investigator and biologist</p> -->
+        <p>
+          <span class="full-text">joanne@sierrastreamsinstitute.org</span>
+        </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static "studysite/images/TaylorM.jpg" %}" alt="Mike" style="width:90%;border-radius:50%; display: block; margin-left: auto; margin-right: auto;">
+      <div class="container">
+        <h2>
+          <span class="full-text">Taylor Schoebel</span>
+          <span class="short-text">Taylor</span>
+        </h2>
+        <p class="title">Rural Health Coordinator</p>
+        <!-- <p>Research & outreach</p> -->
+        <p>
+          <span class="full-text">taylor@sierrastreamsinstitute.org</span>
+        </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static "studysite/images/Annika.jpg" %}" alt="John" style="width:90%;border-radius:50%; display: block; margin-left: auto; margin-right: auto;">
+      <div class="container">
+        <h2>
+          <span class="full-text" style='font-size:2rem;padding-bottom:11px'>Annika Alexander-Ozinskas</span>
+          <span class="short-text">Annika</span>
+        </h2>
+        <p class="title">Researcher</p>
+
+        <!-- <p>Research support, web development</p> -->
+        <p><span class="full-text">annika@sierrastreamsinstitute.org</span></p>
+        <p><button class="button">Contact</button></p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static "studysite/images/WesM.jpg" %}" alt="John" style="width:90%;border-radius:50%; display: block; margin-left: auto; margin-right: auto;">
+      <div class="container">
+        <h2>
+          <span class="full-text">Weston Slaughter</span>
+          <span class="short-text">Wes</span>
+        </h2>
+
+        <p class="title">Research Assistant</p>
+        <!-- <p>Research support, web development</p> -->
+        <p>
+          <span class="full-text">wes@sierrastreamsinstitute.org</span>
+        </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+<!-- UNIVRSITY OF ARIZONA -->
+
+<h2 class="my-4" style="margin: 0 auto; text-align: center;">University of Arizona</h2>
+<hr>
+
+<br>
+<br>
+
+<div class="row">
+  <div class="column" id="monica">
+    <div class="card">
+      <img src="{% static "studysite/images/Monica.jpg" %}" alt="Monica" style="width:90%;border-radius:50%; display: block; margin-left: auto; margin-right: auto;">
+      <div class="container">
+        <h2>
+          <span class="full-text" style='font-size:2rem;padding-bottom:11px'>Mónica Ramírez-Andreotta</span>
+          <span class="short-text">Mónica</span>
+        </h2>
+
+        <p class="title">Principal Investigator</p>
+        <!-- <p>Principal investigator and biologist</p> -->
+        <p>
+          <span class="full-text">mdramire@email.arizona.edu</span>
+        </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static "studysite/images/Diego.jpg" %}" alt="Diego" style="width:90%;border-radius:50%; display: block; margin-left: auto; margin-right: auto;">
+      <div class="container">
+        <h2>
+          <span class="full-text" style='font-size:2rem;'>Diego Huerta</span>
+          <span class="short-text">Diego</span>
+        </h2>
+
+        <p class="title">Research Assistant</p>
+        <!-- <p>Principal investigator and biologist</p> -->
+        <p>
+          <span class="full-text">diegohuerta@email.arizona.edu</span>
+        </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- UCSF STAFF -->
+<h2 class="my-4" style="margin: 0 auto; text-align: center;">University of California, San Francisco</h2>
+<hr>
+
+<br>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{% static "studysite/images/Peggy.png" %}" alt="Joanne" style="width:90%;border-radius:50%; display: block; margin-left: auto; margin-right: auto;">
+      <div class="container">
+        <h2>
+          <span class="full-text">Peggy Reynolds</span>
+          <span class="short-text">Peggy</span>
+        </h2>
+
+        <p class="title">Principal Investigator</p>
+        <!-- <p>Principal investigator and biologist</p> -->
+        <p>
+          <span class="full-text">Peggy.Reynolds@ucsf.edu</span>
+        </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static "studysite/images/NoPho.jpg" %}" alt="Mike" style="width:90%;border-radius:50%; display: block; margin-left: auto; margin-right: auto;">
+      <div class="container">
+        <h2>
+          <span class="full-text">Julie VonBehren</span>
+          <span class="short-text">Julie</span>
+        </h2>
+        <p class="title">Data Analyst</p>
+        <!-- <p>Research & outreach</p> -->
+        <p>
+          <span class="full-text">Julie.VonBehren@ucsf.edu</span>
+        </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+<!-- END ORIGINAL PAGE CONTENT -->
+
 {% endblock %}
