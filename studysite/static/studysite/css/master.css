@@ -51,10 +51,11 @@ li {
 	display: block !important;
 }
 
-/* Team Page */
+/* TEAM PAGE CSS */
 
 
 /* Three columns side by side */
+
 .column {
   float: left;
   width: 33.3%;
@@ -110,7 +111,7 @@ li {
   background-color: #000;
   text-align: center;
   cursor: pointer;
-  width: 15%;
+  width: 18%;
 }
 
 @media (max-width: 1000px){
@@ -121,4 +122,9 @@ li {
 
 .button:hover {
   background-color: #555;
+}
+
+/* Make all names fit in card */
+#fullname {
+  font-size: 27px;
 }

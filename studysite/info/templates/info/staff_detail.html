@@ -1,0 +1,42 @@
+{% extends 'info/info_base.html' %}
+
+{% block body_block %}
+{% load static %}
+
+<!-- MAIN JUMBOTRON -->
+<div class="jumbotron">
+  <h1>Meet Our Researchers</h1>
+  <p>Our team at {{staff_detail.name}} </p>
+</div>
+
+
+  <div class="row">
+  {% for person in staff_detail.employees.all %}
+
+
+      <div class="column">
+        <div class="card">
+          <img src='{{person.image.url}}' alt="Joanne" style="width:90%;border-radius:50%; display: block; margin-left: auto; margin-right: auto;">
+          <div class="container">
+            <h2>
+              <span class="full-text" id="fullname">  <p>{{person.firstname}} <br>{{person.lastname}}</p></span>
+              <span class="short-text">  <p>{{person.firstname}}</p></span>
+            </h2>
+
+            <p class="title">  <p>{{person.title}}</p></p>
+
+
+            <span class="full-text">  <p>{{person.email}}</p></span>
+
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+
+
+  {% endfor %}
+  </div>
+
+
+
+{% endblock %}

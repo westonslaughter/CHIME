@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import View, TemplateView
+from django.views.generic import View, TemplateView, DetailView, ListView
 # 'Contact Us' Form
+from . import models
 # from info.forms import InfoForm
 from django.core.mail import EmailMessage
 from django.shortcuts import redirect
@@ -55,3 +56,14 @@ def contactview(request):
         context= {'form': form}
         # Maybe should make, an "oops!" form?
         return render(request, 'info.html', context)
+
+# Staff Custom Contact
+class OrgListView(ListView):
+    context_object_name = 'Orgs'
+    model = models.Org
+    template_name = 'info/org_list.html'
+
+class StaffDetailView(DetailView):
+    context_object_name = 'staff_detail'
+    model = models.Org
+    template_name = 'info/staff_detail.html'

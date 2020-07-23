@@ -2,6 +2,31 @@
 {% block body_block %}
 {% load static %}
 
+<!-- BELOW are ramblings about what I think needs to be done -->
+
+<!-- I think that it is possible to Create
+the link to a staff contact form, from the contact PAGE
+this actually however, will require significant improvements to the site backend
+ -->
+
+ <!-- STEP ONE: create a 'list' and 'detail' views
+which will contain similar info- the list view will be used to opoulate the contact page,
+and the detail view will be used to link to individual staff members pages -->
+
+<!-- This will require the 'image upload field' from the Pillow library
+ -->
+
+<!-- it will also require some interesting conditionals inside of the for loop / injection
+naamely, the seperators for SSI/UoA/UCSF -->
+
+<!-- This will be dope because it will allow Taylor to dynamically add Organizations and Staff Members to the website! -->
+
+{% for staff in staff_detail %}
+<ol>
+  <li><a href="{{Staff.id}}">Name: {{Staff.name}}</li>
+</ol>
+{% endfor %}
+
 <!-- MAIN JUMBOTRON -->
 <div class="jumbotron">
   <h1>Meet Our Researchers</h1>
