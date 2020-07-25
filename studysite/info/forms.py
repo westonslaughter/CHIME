@@ -12,13 +12,3 @@ class ContactForm(forms.ModelForm):
             'email': forms.EmailInput(attrs={'class': 'form-control','placeholder':'Your Email','style': 'width:270px'}),
             'comment': forms.Textarea(attrs={'class': 'form-control','placeholder':"Tell us about yourself, and why you're interested in the study!"}),
         }
-
-# class WhoForm(forms.ModelForm):
-#     class Meta:
-#         model = WhoMod;
-#         fields = {'name','who'}
-#
-#         widgets ={
-#             'name': forms.TextInput(attrs={'class': 'form-control','placeholder':'Your Name','style': 'width:270px'}),
-#             'email': forms.EmailInput(attrs={'class': 'form-control','placeholder':'Your Email','style': 'width:270px'})
-#         }
