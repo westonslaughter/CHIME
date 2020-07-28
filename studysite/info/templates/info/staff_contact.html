@@ -1,0 +1,19 @@
+{% extends 'info/info_base.html' %}
+{% block body_block %}
+{% load static %}
+
+
+<div class="jumbotron">
+  <h1>Get in touch with {{staff_contact.name}}?</h1>
+</div>
+
+<div class="jumbotron">
+  <h1>Get in touch with {{staff_contact.employees.all}}?</h1>
+</div>
+
+
+<br>
+<br>
+</div>
+
+{% endblock %}

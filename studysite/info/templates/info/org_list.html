@@ -1,0 +1,57 @@
+{% extends 'info/info_base.html' %}
+
+{% block body_block %}
+{% load static %}
+<div class="jumbotron">
+<h1>Organizations: </h1>
+
+
+  <div class="row">
+  {% for place in Orgs %}
+
+  {% if place.id == 1 or place.id == 2 %}
+    <div class="column">
+
+      <div class="card">
+        <img src='{{place.image.url}}' alt="Campus of {{place.name}}" style="width:100%; display: block; margin-left: auto; margin-right: auto;">
+        <div class="container">
+          <h2>
+            <span class="full-text">  <p style="width:27rem;"><a href='{{place.url}}'>{{place.name}}</a></p></span>
+            <!-- <span class="short-text">  <p>{{person.firstname}}</p></span> -->
+          </h2>
+
+          <br>
+
+          <p class="title">  <p>{{place.city}}, {{place.state}}</p></p>
+
+          <br>
+          <p><button class="btn btn-default" style="width:80%;"><a href="{{place.id}}/">Meet the Team</a></button></p>
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <div class="column">
+
+
+      <div class="card">
+        <img src='{{place.image.url}}' alt="Campus of {{place.name}}" style="width:100%; display: block; margin-left: auto; margin-right: auto;">
+        <div class="container">
+          <h2>
+            <span class="full-text">  <p style="width:27rem;"><a href='{{place.url}}'>{{place.name}}</a></p></span>
+            <!-- <span class="short-text">  <p>{{person.firstname}}</p></span> -->
+          </h2>
+
+          <p class="title">  <p>{{place.city}}, {{place.state}}</p></p>
+          <p><button class="btn btn-default" style="width:80%;"><a href="{{place.id}}/">Meet the Team</a></button></p>
+        </div>
+
+
+      </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+<!-- TESTEND -->
+  </div>
+</div>
+
+{% endblock %}
