@@ -3,6 +3,6 @@ Python Django Framework web portal for California Health Impacts from Mining Exp
 
 Tasks | Responsible
 ------- | --------
-Execute bash commands to send GitHub to PythonAnywehre | Primary Author of any script responsible for update
-Allow chimestudy domain as host | WS
+Look into story map vs html/js for dynamic study page | DP + WS
+Change color scheme potentially | WS
 
