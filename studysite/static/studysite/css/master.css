@@ -3,20 +3,63 @@ body {
   background-color: #77A6F7;
 }
 
-.jumbotron {
+/* .jumbotron {
   background-color: #D3E3FC;
 } */
+.jumbotron {
+  background-color:#7EA0B7;
+  color: #F4F1DE;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 4rem;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  padding-top: 2rem;
+}
+
+hr {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 4rem;
+}
+
+.chimehead {
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+  color: #F4F1DE;
+}
+
+.btn a {
+  color: #0A1045;
+}
+
+.btn {
+  color:  #597081;
+  background-color: #C5EBC3;
+  border-color: #C5EBC3;
+}
+
 
 h1 {
   font-family: 'Karla', sans-serif;
 }
 
-p,li,h2 {
+p,li,h2,a {
   font-family: 'Montserrat', sans-serif;
+  color:#FFF4E9;
 }
 
 li {
   font-size: 1.6em;
+  color:#FFF4E9;
 }
 
 .myform {
@@ -25,6 +68,10 @@ li {
 
 .navbar-brand {
   font-size: 2.3em;
+}
+
+.navbar {
+  background-color: #FFF4E9;
 }
 
 /* NAVBAR CSS */
@@ -92,6 +139,15 @@ li {
 /* Add some shadows to create a card effect */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #597081;
+  border-radius: 2%;
+}
+
+/* DARKBLUE: 0A1045 */
+
+#staffcard {
+  background-color: #8DB6CD;
+  border-radius: 2%;
 }
 
 /* Some left and right padding inside the container */

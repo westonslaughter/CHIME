@@ -28,13 +28,17 @@
      </script>
      <link href="https://fonts.googleapis.com/css2?family=Karla&family=Montserrat&display=swap" rel="stylesheet">
   </head>
-  <body>
-
-  <body>
+  <body style="background-color: #597081;">
 
 <!-- NAVBAR HAMBURGER -->
+<div style="background-color: #597081;">
 
-  <nav class="navbar navbar-default">
+
+<header><h1 class="chimehead"><strong>California Health Impacts from Mining Exposure</strong></h1></header>
+
+
+  <!-- <nav class="navbar navbar-default"> -->
+
 
       <!-- Inside of a Container -->
     <div class="container-fluid mobile-nav">
@@ -42,6 +46,9 @@
       <!-- Brand and toggle get grouped for better mobile display -->
       <!-- This is the actual code that create the "hamburger icon" -->
       <!-- The data-target grabs ids to put into the icon -->
+
+
+
       <div class="navbar-header menu-btn" id="menu-btn">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 
@@ -52,14 +59,15 @@
           <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand" href="{% url 'home' %}">CHIME</a>
+
       </div>
 
       <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
-      <div class="collapse navbar-collapse responsive-menu" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
+      <div class="collapse navbar-collapse responsive-menu" id="bs-example-navbar-collapse-1" >
+        <ul class="nav navbar-nav navbar-left">
 
-          <li><a href="{% url 'study' %}">Our Study<span class="sr-only">(current)</span></a></li>
+          <li><a href="{% url 'home' %}">CHIME-3<span class="sr-only">(current)</span></a></li>
+          <li><a href="{% url 'study' %}">Our Research<span class="sr-only">(current)</span></a></li>
           <li><a href="{% url 'info:stafflist' %}">Our Team</a></li>
           <li><a href="{% url 'info:info' %}">Contact</a></li>
 
@@ -67,8 +75,11 @@
 
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
-  </nav>
 
+<hr class="my-4" style="color:#597081">
+
+  <!-- </nav> -->
+</div>
     <div class="container mycontent">
 
     {% block body_block %}
