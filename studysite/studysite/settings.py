@@ -130,8 +130,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'chimecontact@gmail.com'
 
-# SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
-
+# Testing git update
 EMAIL_HOST= 'smtp.gmail.com'
 EMAIL_HOST_USER= 'chimecontact@gmail.com'
 EMAIL_HOST_PASSWORD= '22Stonefly!'
