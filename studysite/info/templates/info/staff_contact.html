@@ -8,7 +8,15 @@
 </div>
 
 <div class="jumbotron">
-  <h1>Get in touch with {{staff_contact.employees.all}}?</h1>
+  <!-- <h1>Get in touch with {{staff_contact.employees.all }}?</h1> -->
+  <h1>
+    Contact {{page_alt.firstname}}:
+    <!-- Below functions to produce staff firstnames: -->
+    <!-- {% for e in staff_contact.employees.all %}
+      {{e.firstname}}
+    {% endfor %} -->
+  </h1>
+
 </div>
 
 
