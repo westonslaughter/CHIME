@@ -3,8 +3,8 @@ Python Django Framework web portal for California Health Impacts from Mining Exp
 
 Tasks | Responsible | Due Date (Friday)
 ------- | -------- | -------- 
-Draft up story map for dynamic study page | DP + WS | **8/14**
+Refine text and layers of frontpage storymap | DP | **8/14**
 Get write-up and priorities from Annika/Taylor re:StoryMap | DP/WS | **8/14**
-Brainstorm front-end design possibilities | DP + WS | **8/7**
+Discuss front-end design as is, other options | DP + WS | **8/7**
 Website in Spanish? | DP + WS | 
   
