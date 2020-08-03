@@ -13,14 +13,17 @@ from django.core.mail import send_mail
 class IndexView(TemplateView):
     template_name='index.html'
 
-class StudyView(TemplateView):
-    template_name='study.html'
-
 class UsView(TemplateView):
     template_name='us.html'
 
 class ThanksView(TemplateView):
     template_name='thanks.html'
+
+class StudyView(ListView):
+    template_name='study.html'
+    model = models.Study
+    context_object_name = 'Studies'
+
 
 # class InfoView(TemplateView):
     # template_name='info.html'

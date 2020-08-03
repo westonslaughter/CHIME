@@ -1,6 +1,21 @@
 {% extends 'base.html' %}
 {% block body_block %}
 {% load static %}
-  <h1>California Health Impact from Mining Exposure, and related research!</h1>
-  <img src="{% static "studysite/images/BreastCancerCA.PNG" %}" alt="map of breast cancer rates in different CA counties"/>
+
+
+{% for study in Studies %}
+<div class="jumbotron">
+
+  <div class="{% if forloop.counter|divisibleby:2 %}even{% else %}odd{% endif %}" id="{{ entry.id }}">
+    <h2><strong>{{ study.studytitle }}</strong></h2>
+
+    <hr class="my-4">
+    <img class= "studyimage" src="{{study.studyimage.url}}" alt="Study Graphics" width="40%" height="50%">
+    <p>The overall goal of the research project was to engage a mining impacted community in a preliminary investigation of human chemical body burden from their mining legacy, in an effort to determine whether further study is warranted of a link between breast cancer incidence and exposure to mining contaminants. The study was focused on a rural community in northern California’s Sierra Nevada foothills that was extensively mined for more than a century beginning with the Gold Rush in 1849. No human health studies have previously been conducted in the region, despite the fact that cadmium, arsenic and other carcinogenic mining-related contaminants are known to be pervasive in Gold Country, and that breast cancer incidence in the three most densely populated counties of Gold Country ranks in the top ten of California counties.</p>
+  </div>
+</div>
+  <!-- <p>The overall goal of the research project was to engage a mining impacted community in a preliminary investigation of human chemical body burden from their mining legacy, in an effort to determine whether further study is warranted of a link between breast cancer incidence and exposure to mining contaminants. The study was focused on a rural community in northern California’s Sierra Nevada foothills that was extensively mined for more than a century beginning with the Gold Rush in 1849. No human health studies have previously been conducted in the region, despite the fact that cadmium, arsenic and other carcinogenic mining-related contaminants are known to be pervasive in Gold Country, and that breast cancer incidence in the three most densely populated counties of Gold Country ranks in the top ten of California counties.</p> -->
+
+{% endfor %}
+  <!-- <img src="{% static "studysite/images/BreastCancerCA.PNG" %}" alt="map of breast cancer rates in different CA counties"/> -->
 {% endblock %}

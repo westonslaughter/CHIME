@@ -47,3 +47,12 @@ class Staff(models.Model):
 
     def __str__(self):
         return self.email
+
+class Study(models.Model):
+    studytitle = models.CharField(max_length=256)
+    description = models.CharField(max_length=10000)
+    studyimage = models.ImageField(upload_to='images/', max_length=100, default='NoPho.jpg')
+    organisations = models.ForeignKey(Org,related_name="studies",on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.studytitle
