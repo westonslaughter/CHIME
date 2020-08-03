@@ -6,6 +6,11 @@ body {
 /* .jumbotron {
   background-color: #D3E3FC;
 } */
+.subtext {
+  color: #EDEDD0;
+  color: black;
+}
+
 .jumbotron {
   background-color:#7EA0B7;
   color: #F4F1DE;

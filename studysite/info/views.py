@@ -78,9 +78,44 @@ class StaffContactView(DetailView):
     context_object_name = 'staff_contact'
     model = models.Org
     template_name = 'info/staff_contact.html'
+    form_class = ContactForm
 
     def get_context_data(self, **kwargs):
         context = super(StaffContactView, self).get_context_data(**kwargs)
         page_alt = models.Org.objects.get(id=self.kwargs.get('pk','')).employees.get(id=self.kwargs.get('pk_alt', ''))
         context['page_alt'] = page_alt
+        # context['form'] = ContactForm
         return context
+
+# ONE DAY: Individual contact forms. Time/Effort vs Reward has been
+# WAY off on this project. Abandoning for now.
+
+    # def emailme(self,request,*args,**kwargs):
+    #     name=''
+    #     email=''
+    #     comment=''
+    #
+    #     form = self.form_class(request.POST)
+    #
+    #     if form.is_valid():
+    #         name= form.cleaned_data.get("name")
+    #         email= form.cleaned_data.get("email")
+    #         comment= form.cleaned_data.get("comment")
+    #
+    #
+    #         subject= "A Visitor's Comment"
+    #
+    #
+    #         comment= name + " with the email, " + email + ", sent the following message:\n\n" + comment;
+    #
+    #         send_mail(subject, comment, 'chimecontact@gmail.com', ['chimecontact@gmail.com'])
+    #
+    #
+    #         context= {'form': form}
+    #
+    #         return render(request, 'thanks.html', context)
+    #
+    #     else:
+    #         context= {'form': form}
+    #         # Maybe should make, an "oops!" form?
+    #         return render(request, 'staff_contact.html', context)

@@ -11,7 +11,7 @@
 
 
   <div class="row">
-  {% for person in staff_detail.employees %}
+  {% for person in staff_detail.employees.all %}
 
 
       <div class="column">
@@ -23,12 +23,13 @@
               <span class="short-text">  <p>{{person.firstname}}</p></span>
             </h2>
 
-            <p class="title">  <p>{{person.title}}</p></p>
+            <p class="title">  <p class="subtext"><strong>{{person.title}}</strong></p></p>
 
 
-            <span class="full-text">  <p>{{person.email}}</p></span>
+            <span class="full-text">  <p class="subtext"><em>{{person.email}}</em></p></span>
 
-            <p><button class="button"><a href="{{person.id}}/">Contact</a></button></p>
+            <!-- <p><button class="button"><a href="{{person.id}}/">Contact</a></button></p> -->
+
           </div>
         </div>
       </div>
