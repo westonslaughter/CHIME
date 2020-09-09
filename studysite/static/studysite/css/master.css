@@ -172,6 +172,10 @@ li {
   border-radius: 2%;
 }
 
+.card img{
+  padding-top: 1rem;
+}
+
 /* DARKBLUE: 0A1045 */
 
 #staffcard {
